@@ -1,14 +1,14 @@
 <h1>Add Quote:</h1>
 
-  <form [formGroup]="updtaTeForm" (ngSubmit)="updateQuote()"  class="form-inline">
+  <form [formGroup]="addForm" (ngSubmit)="addQuote()"  class="form-inline">
      <div class="form-group">
         <label for="quoteAuthor">Author</label>
-        <input type="text" name="quoteAuthor" id="quoteAuthor" formControlName="quoteText" [(ngModel)]="currentAuthor" class="form-control">
+        <input type="text" name="quoteAuthor" id="quoteAuthor" formControlName="quoteText" [(ngModel)]="thisAuthor" class="form-control">
       </div>
     <div class="form-group">
       <br/>
       <label for="quoteText">Quote</label>
-    <textarea rows="4" cols="50"  name="quoteText" id="quoteText" formControlName="quoteAuthor" [(ngModel)]="currentQuote" class="form-control"></textarea>
+    <textarea rows="4" cols="50"  name="quoteText" id="quoteText" formControlName="quoteAuthor" [(ngModel)]="thisQuote" class="form-control"></textarea>
     </div>
 
     <br/>
@@ -17,4 +17,4 @@
 </form>
 
 
-<p>Hello {{currentAuthor}}!</p>
+<p>Hello {{thisAuthor}}!</p>

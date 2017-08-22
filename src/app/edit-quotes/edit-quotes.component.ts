@@ -25,7 +25,6 @@ export class EditQuotesComponent  {
   updtaTeForm: FormGroup = this.builder.group({
       quoteText: this.quoteText,
       quoteAuthor: this.quoteAuthor,
-
 });
 
   constructor(private builder: FormBuilder, private dataQuote:dataQuote, private route: ActivatedRoute,) { }

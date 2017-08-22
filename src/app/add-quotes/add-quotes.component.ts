@@ -18,17 +18,21 @@ export class AddQuotesComponent {
   quotes: dataQuote[];
   quoteText = new FormControl('')
   quoteAuthor = new FormControl('')
-  private currentAuthor : any;
-  private currentQuote : any;
+  private thisAuthor = "initial value";
+  private thisQuote = "initial Quote";
 
+  addForm: FormGroup = this.builder.group({
+      quoteText: this.quoteText,
+      quoteAuthor: this.quoteAuthor,
+});
   constructor(private builder: FormBuilder, private dataQuote:dataQuote) { }
 
   ngOnInit() {
   }
 
   addQuote(){
-
-  this.dataQuote.add(this.currentAuthor, this.currentQuote ).subscribe(
+    alert(this.thisAuthor);
+  this.dataQuote.addQuote(this.thisAuthor, this.thisQuote ).subscribe(
 
                     err => {
                         // Log errors if any

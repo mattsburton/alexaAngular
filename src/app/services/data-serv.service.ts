@@ -22,7 +22,9 @@ export class dataQuote {
   }
 
 
-  add(name, quote){
+  addQuote(name, quote){
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
     let body = { name: name, quote: quote};
     return this.http.post('/api/add', body)
         .map(res => res.json())

@@ -53,9 +53,9 @@ var router = express.Router();
   })
 
   router.post('/api/add', (req, res, data) => {
-    //console.log(req.body.quote);
+    console.log(req.body.name);
      quote.create({name: req.body.name, quote: req.body.quote  }, (err) => {
-       if (err) { console.log('an error occurred - deleted')}
+       if (err) { console.log('an error occurred - add')}
      })
   })
 
