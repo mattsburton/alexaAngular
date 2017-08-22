@@ -52,6 +52,13 @@ var router = express.Router();
      })
   })
 
+  router.post('/api/add', (req, res, data) => {
+    //console.log(req.body.quote);
+     quote.create({name: req.body.name, quote: req.body.quote  }, (err) => {
+       if (err) { console.log('an error occurred - deleted')}
+     })
+  })
+
 
   router.get('/api/delete/:_id', (req, res, data) => {
     var param = req.param("_id");

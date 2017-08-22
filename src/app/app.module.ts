@@ -10,6 +10,7 @@ import { dataQuote } from './services/data-serv.service';
 import { HttpModule } from '@angular/http';
 import { ViewSingleComponent } from './view-single/view-single.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EditQuotesComponent,
     DelQuotesComponent,
     ViewSingleComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule, routing, HttpModule, ReactiveFormsModule

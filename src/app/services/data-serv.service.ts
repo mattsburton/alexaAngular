@@ -21,6 +21,13 @@ export class dataQuote {
           .map(res => res.json())
   }
 
+
+  add(name, quote){
+    let body = { name: name, quote: quote};
+    return this.http.post('/api/add', body)
+        .map(res => res.json())
+  }
+
   bibSingle(bibId){
     return this.http.get('/api/getSingle/'+bibId)
         .map(res => res.json())
