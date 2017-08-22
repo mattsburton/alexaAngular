@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor ="let item of quotes; let i = index;" class="active">
+    Author:{{item.name}} - <a   [routerLink]="['/viewsingle', item._id]"> View | </a> <a   [routerLink]="['/delete', item._id]"> Delete | </a><a   [routerLink]="['/edit', item._id]"> Edit | </a>
+
+
+
+  </li>
+</ul>
+
+<p>
+  view-quotes works!
+</p>

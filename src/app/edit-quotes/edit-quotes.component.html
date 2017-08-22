@@ -1,0 +1,18 @@
+<h1>Testing server:</h1>
+
+  <form [formGroup]="updtaTeForm" (ngSubmit)="updateQuote()">
+    <label for="quoteAuthor">Author</label>
+    <input type="text" name="quoteAuthor" id="quoteAuthor" formControlName="quoteText" [(ngModel)]="currentAuthor">
+    <label for="quoteText">Quote</label>
+
+    <textarea rows="4" cols="50"  name="quoteText" id="quoteText" formControlName="quoteAuthor" [(ngModel)]="currentQuote">
+    </textarea>
+
+
+    <br/>
+
+    <button type="submit">Updated</button>
+</form>
+
+
+<p>Hello {{currentAuthor}}!</p>
