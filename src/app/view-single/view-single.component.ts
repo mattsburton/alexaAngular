@@ -15,7 +15,9 @@ export class ViewSingleComponent implements OnInit {
    private sub: any;
    private data: any;
    quotes: dataQuote[];
-
+   curId ='';
+   curName ='';
+   curQuote ='';
 
    constructor(private route: ActivatedRoute, private dataQuote: dataQuote) {}
 
@@ -36,7 +38,7 @@ export class ViewSingleComponent implements OnInit {
 
    bibSingle(quoteId){
      this.dataQuote.bibSingle(quoteId).subscribe(
-         quotes => this.quotes = quotes, //Bind to quotes
+           quotes => { this.quotes = quotes, this.curId = quotes._id, this.curName = quotes.name, this.curQuote = quotes.quote;},
          err => {
            console.log(err);
          });

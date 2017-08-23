@@ -15,6 +15,9 @@ export class DelQuotesComponent implements OnInit {
    private sub: any;
    private data: any;
    quotes: dataQuote[];
+   curId = "";
+   curName = "";
+   curQuote ="";
 
 
    constructor(private route: ActivatedRoute, private dataQuote: dataQuote, private router: Router) {}
@@ -35,15 +38,17 @@ export class DelQuotesComponent implements OnInit {
    }
 
    bibSingle(quoteId){
+
+
      this.dataQuote.bibSingle(quoteId).subscribe(
-         quotes => this.quotes = quotes, //Bind to quote
+          quotes => { this.quotes = quotes, this.curId = quotes._id, this.curName = quotes.name, this.curQuote = quotes.quote;},
          err => {
            console.log(err);
          });
 
-         }
+    }
 
-         del(quoteId){
+    del(quoteId){
            alert ('deleting....'+quoteId);
 
            this.dataQuote.delete(quoteId).subscribe(
@@ -53,7 +58,7 @@ export class DelQuotesComponent implements OnInit {
                });
                this.fetch();//Refresh quotes
                this.router.navigate(['/view']);
-         }
+      }
 
          fetch (){
            this.dataQuote.fetch().subscribe(

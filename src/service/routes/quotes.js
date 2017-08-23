@@ -17,6 +17,10 @@ var router = express.Router();
       });
   });
 
+router.get('/api/', (req, res) => {
+  res.send('api works');
+});
+
   router.get('/api/getSingle/:_id', function(req, res, data) {
       // use mongoose to get all todos in the database
       quote.findOne({_id:  req.params._id }, function(err,obj) {

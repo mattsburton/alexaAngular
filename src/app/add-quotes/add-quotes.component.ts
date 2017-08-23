@@ -18,8 +18,8 @@ export class AddQuotesComponent {
   quotes: dataQuote[];
   quoteText = new FormControl('')
   quoteAuthor = new FormControl('')
-  private thisAuthor = "initial value";
-  private thisQuote = "initial Quote";
+  thisAuthor = "initial value";
+  thisQuote = "initial Quote";
 
   addForm: FormGroup = this.builder.group({
       quoteText: this.quoteText,

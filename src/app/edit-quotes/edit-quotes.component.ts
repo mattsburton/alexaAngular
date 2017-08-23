@@ -18,8 +18,8 @@ export class EditQuotesComponent  {
   quotes: dataQuote[];
   private sub: any;
   private data: any;
-  private currentAuthor = "initial value";
-  private currentQuote = "initial Quote";
+  currentAuthor = "initial value";
+  currentQuote = "initial Quote";
   quoteText = new FormControl('')
   quoteAuthor = new FormControl('')
   updtaTeForm: FormGroup = this.builder.group({
