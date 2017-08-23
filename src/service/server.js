@@ -28,7 +28,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
-
 app.use('/', quoteroute); //This is our route middleware
 
 // Catch all other routes and return the index file
